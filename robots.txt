@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/sitemap.xml
+Sitemap: https://aichixiangcaiyu.github.io/yingju-furniture/sitemap.xml
