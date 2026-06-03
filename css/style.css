@@ -26,6 +26,10 @@ section:not(.hero){content-visibility:auto;contain-intrinsic-size:1px 720px}
 .nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .logo{width:150px;min-width:150px}
 .menu{display:flex;gap:14px;font-size:13px;font-weight:800;align-items:center;justify-content:flex-end;flex-wrap:nowrap;white-space:nowrap;min-width:0}
+.menu a[href="banquet-chairs.html"],
+.menu a[href="church-chairs.html"],
+.menu a[href="wedding-event-chairs.html"],
+.menu a[href="banquet-tables.html"]{display:none}
 .menu a{padding:24px 0;position:relative;line-height:1.15}
 .menu a:hover,.menu a.active{color:var(--gold)}
 .menu a.active:after,.menu a:hover:after{content:"";position:absolute;left:0;right:0;bottom:17px;height:2px;background:var(--gold)}
