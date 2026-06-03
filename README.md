@@ -83,3 +83,5 @@ https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/
 - Company: Hebei Yingju Furniture Co., Ltd
 - Email: felix@yingjufurniture.com
 - WhatsApp: +86 180 3164 8207
+
+Deployment refresh: GitHub Pages assets updated.
