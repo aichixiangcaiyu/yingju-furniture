@@ -13,15 +13,25 @@
 
   const translatedUrl = language => {
     const path = cleanPath();
+    const englishPath = path.startsWith('/zh-cn.html') ? '/' : path;
+
     if (language === 'en') {
-      return `https://${originalHost}${path}`;
+      return `https://${originalHost}${englishPath}`;
     }
 
-    const separator = path.includes('?') ? '&' : '?';
-    return `https://${translateHost}${path}${separator}_x_tr_sl=en&_x_tr_tl=${encodeURIComponent(language)}&_x_tr_hl=en&_x_tr_pto=wapp`;
+    if (language === 'zh-CN') {
+      return `https://${originalHost}/zh-cn.html`;
+    }
+
+    const separator = englishPath.includes('?') ? '&' : '?';
+    return `https://${translateHost}${englishPath}${separator}_x_tr_sl=en&_x_tr_tl=${encodeURIComponent(language)}&_x_tr_hl=en&_x_tr_pto=wapp`;
   };
 
   const activeLanguage = () => {
+    if (window.location.pathname.endsWith('/zh-cn.html')) {
+      return 'zh-CN';
+    }
+
     const params = new URLSearchParams(window.location.search);
     return params.get('_x_tr_tl') || 'en';
   };
