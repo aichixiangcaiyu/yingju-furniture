@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://aichixiangcaiyu.github.io/yingju-furniture/sitemap.xml
+Sitemap: https://www.yingjufurniture.com/sitemap.xml
