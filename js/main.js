@@ -1,29 +1,16 @@
-﻿const quoteForm = document.getElementById('quote-form');
-
-if (quoteForm) {
-  quoteForm.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const data = new FormData(quoteForm);
-    const lines = [
-      'New project inquiry from Yingju Furniture website:',
-      '',
-      `Name: ${data.get('name') || ''}`,
-      `Company: ${data.get('company') || ''}`,
-      `Country: ${data.get('country') || ''}`,
-      `Product: ${data.get('product') || ''}`,
-      `Quantity: ${data.get('quantity') || ''}`,
-      `Email: ${data.get('email') || ''}`,
-      '',
-      'Project Details:',
-      data.get('details') || ''
-    ];
-
-    const subject = encodeURIComponent('Website inquiry - Yingju Furniture');
-    const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:felix@yingjufurniture.com?subject=${subject}&body=${body}`;
-  });
-}
+﻿// Preselect product category when arriving from a product page (?product=...)
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var wanted = params.get('product');
+    var select = document.querySelector('#quote-form select[name="product"]');
+    if (wanted && select) {
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].text === wanted) { select.selectedIndex = i; break; }
+      }
+    }
+  } catch (e) {}
+})();
 
 
 const catalogFilters = document.querySelectorAll('[data-category-filter]');
