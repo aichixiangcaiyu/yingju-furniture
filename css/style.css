@@ -218,3 +218,8 @@ textarea{min-height:120px}
 .whatsapp-float svg{width:24px;height:24px;flex:0 0 24px}
 @media(max-width:900px){.badge-grid,.process-line{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.badge-grid,.process-line{grid-template-columns:1fr}.whatsapp-float{right:14px;bottom:14px;padding:12px}.whatsapp-float span{display:none}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;background:#0a2233;border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:22px 24px}
+.fact b{display:block;font-size:26px;color:#fff;letter-spacing:.5px}
+.fact b small{font-size:14px;font-weight:400;opacity:.7}
+.fact span{font-size:12.5px;color:#b9c8d4;line-height:1.5}
+@media(max-width:700px){.facts{grid-template-columns:repeat(2,1fr)}}
